@@ -24,6 +24,7 @@
  */
 
 #include "libpsd.h"
+#include <string.h>
 #include "psd_config.h"
 #include "psd_system.h"
 #include "psd_stream.h"

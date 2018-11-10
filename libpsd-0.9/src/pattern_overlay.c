@@ -23,6 +23,7 @@
  * $Id: pattern_overlay.c, created by Patrick in 2006.06.18, libpsd@graphest.com Exp $
  */
 
+#include <string.h>
 #include <math.h>
 #include "libpsd.h"
 #include "psd_config.h"
