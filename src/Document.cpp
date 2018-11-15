@@ -7,7 +7,7 @@
 #  define mkdir(x, y) _mkdir(x)
 #endif
 
-std::string build_path(const char *dirname, const char *filename, const char *format);
+#include "build_path.h"
 
 
 Document::Document(const char *name, int width, int height):

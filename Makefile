@@ -1,5 +1,5 @@
 obj-files = build/main.o build/Document.o build/Layer.o build/Record.o build/LayerGroup.o build/TextFormatter.o build/XmlFormatter.o build/PlistFormatter.o build/PsdParser.o build/JsonFormatter.o \
-build/lodepng.o
+build/lodepng.o build/build_path.o
 libpsd-objects = adjustment.o bevel_emboss.o bitmap.o blend.o boundary.o brightness_contrast.o channel_image.o channel_mixer.o color.o color_balance.o color_mode.o color_overlay.o \
 curves.o descriptor.o drop_shadow.o effects.o file_header.o fixed.o gaussian_blur.o gradient_blend.o gradient_fill.o gradient_map.o gradient_overlay.o hue_saturation.o image_data.o \
 image_resource.o inner_glow.o inner_shadow.o invert.o layer_mask.o levels.o outer_glow.o path.o pattern.o pattern_fill.o pattern_overlay.o photo_filter.o posterize.o psd.o psd_system.o \
@@ -18,6 +18,8 @@ build_dir:
 
 build/main.o: src/main.cpp src/Document.h src/formatter/TextFormatter.h src/formatter/XmlFormatter.h src/formatter/JsonFormatter.h src/parser/PsdParser.h
 	g++ -c -Wno-write-strings -Ilibpsd-0.9/include src/main.cpp -o build/main.o
+build/build_path.o: src/build_path.cpp src/build_path.h
+	g++ -c src/build_path.cpp -o build/build_path.o
 build/Document.o: src/Document.cpp src/Document.h
 	g++ -c src/Document.cpp -o build/Document.o
 build/Layer.o: src/Layer.cpp src/Layer.h
