@@ -1,6 +1,6 @@
 #include "Document.h"
 
-#if !defined(_MSC_VER)
+#if !defined(_MSC_VER) and !defined(_WIN32) and !defined(__MINGW32__)
 #  include <sys/stat.h>
 #else
 #  include <direct.h>
